@@ -1,0 +1,12 @@
+[Unit]
+Description=DJI Ronin CAN control service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/dji_can_control.py
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
